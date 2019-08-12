@@ -4,43 +4,43 @@
 
 Departments as dep
 -
-dept_no VARCHAR PK 
+dept_no VARCHAR(4) PK 
 dept_name VARCHAR
 
 
 dept_emp as de
 -
 emp_no INT FK >- em.emp_no
-dept_no VARCHAR FK >- dep.dept_no
-from_date VARCHAR
-to_date VARCHAR
+dept_no VARCHAR(4) FK >- dep.dept_no
+from_date DATE
+to_date DATE
 
 dept_manager as dm
 --
-dept_no VARCHAR FK >- dep.dept_no
+dept_no VARCHAR(4) FK >- dep.dept_no
 emp_no INT FK >- em.emp_no
-from_date VARCHAR
-to_date VARCHAR
+from_date DATE
+to_date DATE
 
 employees as em
 ---
 emp_no INT PK
-birth_date VARCHAR 
+birth_date DATE
 first_name VARCHAR
 last_name VARCHAR
-gender VARCHAR
-hire_date VARCHAR
+gender VARCHAR(1)
+hire_date DATE
 
 salaries as sa
 ----
 emp_no INT FK >- em.emp_no
 salary INT
-from_date VARCHAR
-to_date VARCHAR
+from_date DATE
+to_date DATE
 
 titles as ti
 -----
 emp_no INT FK >- em.emp_no
 title VARCHAR
-from_date VARCHAR
-to_date VARCHAR
+from_date DATE
+to_date DATE

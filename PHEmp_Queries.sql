@@ -22,7 +22,7 @@ WHERE DATE_PART('year',hire_date) = 1986 ;
 SELECT dep.dept_no, dep.dept_name, 
 	dep.emp_no as manager_emp_no,
 	e.last_name, e.first_name, 
-	dep.manage_from, dep.manage_to,
+	--dep.manage_from, dep.manage_to,
 	dep.emp_from, dep.emp_to
 FROM employees as e
 RIGHT JOIN
@@ -108,6 +108,8 @@ FROM employees
 GROUP BY last_name
 ORDER BY last_name_count DESC;
 
-
-
-
+--Search your ID number
+--499942
+SELECT * FROM employees
+WHERE emp_no = 499942;
+--Haha, April Fool's Day in August
